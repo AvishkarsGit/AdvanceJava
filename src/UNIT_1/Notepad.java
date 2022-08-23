@@ -1,8 +1,11 @@
 package UNIT_1;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Notepad extends Frame {
+public class Notepad extends Frame implements ActionListener {
 
     MenuBar mbr;
     Menu m1,m2,m20,m3;
@@ -18,6 +21,9 @@ public class Notepad extends Frame {
         m13=new MenuItem("Save as");
         m14=new MenuItem("Open");
         m15=new MenuItem("Page Setup");
+
+        m12.addActionListener(this);
+        m14.addActionListener(this);
 
         m1.add(m11);
         m1.add(m12);
@@ -60,6 +66,19 @@ public class Notepad extends Frame {
         mbr.add(m3);
 
         setMenuBar(mbr);
+    }
+    public void actionPerformed(ActionEvent ae)
+    {
+        if (ae.getSource()==m12)
+        {
+            FileDialog fd = new FileDialog(this,"SAVE", FileDialog.SAVE);
+            fd.setVisible(true);
+        }
+        else if (ae.getSource()==m14)
+        {
+            FileDialog fd1 = new FileDialog(this,"OPEN", FileDialog.LOAD);
+            fd1.setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
