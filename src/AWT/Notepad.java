@@ -1,6 +1,5 @@
-package UNIT_1;
+package AWT;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

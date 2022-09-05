@@ -1,7 +1,7 @@
 /*
 Creating Interactive Login Page in Java programming
  */
-package UNIT_1;
+package AWT;
 
 import java.awt.*;
 import java.awt.event.*;

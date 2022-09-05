@@ -1,5 +1,4 @@
-package UNIT_1;
-import javafx.scene.control.Labeled;
+package AWT;
 
 import javax.swing.*;
 import java.awt.*;

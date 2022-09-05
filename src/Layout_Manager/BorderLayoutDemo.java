@@ -1,7 +1,5 @@
 package Layout_Manager;
 
-import UNIT_1.TextAreaDemo;
-
 import java.awt.*;
 
 public class BorderLayoutDemo extends Frame {

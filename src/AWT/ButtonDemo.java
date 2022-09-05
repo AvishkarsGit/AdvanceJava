@@ -1,11 +1,11 @@
-package UNIT_1;
+package AWT;
 
 import java.awt.*;
 
-public class ButtonDemo1 extends Frame {
-    ButtonDemo1()
+public class ButtonDemo extends Frame {
+    ButtonDemo()
     {
-        FlowLayout f = new FlowLayout(FlowLayout.LEFT);
+        FlowLayout f = new FlowLayout();
         setLayout(f);
         Button b = new Button("Ok");
         Button b1 = new Button("Cancel");
@@ -15,7 +15,7 @@ public class ButtonDemo1 extends Frame {
         add(b2);
     }
     public static void main(String[] args) {
-        ButtonDemo1 f1 = new ButtonDemo1();
+        ButtonDemo f1 = new ButtonDemo();
         f1.setSize(500,500);
         f1.setVisible(true);
         f1.setTitle("My frame");
