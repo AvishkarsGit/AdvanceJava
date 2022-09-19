@@ -4,11 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class JLoginForm extends JFrame implements ActionListener {
+public class JLoginForm extends JFrame implements ActionListener, ItemListener {
     JLabel label1, uname,pass;
     JButton b1,b2;
     JTextField t1;
     JPasswordField password;
+    JCheckBox cb;
     Container c;
     JLoginForm()
     {
@@ -18,8 +19,10 @@ public class JLoginForm extends JFrame implements ActionListener {
         pass = new JLabel("Enter Password:");
         t1 = new JTextField(50);
         password = new JPasswordField(50);
+        cb = new JCheckBox("Show Password");
         b1 = new JButton("Login");
         b2 = new JButton("Clear");
+
         c.setLayout(null);
         c.setBackground(new Color(255,0,255));
 
@@ -28,8 +31,9 @@ public class JLoginForm extends JFrame implements ActionListener {
         pass.setBounds(100,150,130,30);
         t1.setBounds(250,100,130,30);
         password.setBounds(250,150,130,30);
-        b1.setBounds(140,200,90,30);
-        b2.setBounds(250,200,90,30);
+        cb.setBounds(250,190,130,30);
+        b1.setBounds(140,240,90,30);
+        b2.setBounds(250,240,90,30);
 
         label1.setFont(new Font("Times New Roman", Font.BOLD|Font.ITALIC,18 ));
         uname.setFont(new Font("Times New Roman", Font.BOLD,15 ));
@@ -47,8 +51,10 @@ public class JLoginForm extends JFrame implements ActionListener {
         c.add(password);
         c.add(b1);
         c.add(b2);
+        c.add(cb);
         b1.addActionListener(this);
         b2.addActionListener(this);
+        cb.addItemListener(this);
     }
 
     @Override
@@ -69,7 +75,15 @@ public class JLoginForm extends JFrame implements ActionListener {
                 password.setText("");
         }
     }
-
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+        if (cb.isSelected()){
+            password.setEchoChar((char)0);
+        }
+        else{
+            password.setEchoChar('.');
+        }
+    }
     public static void main(String[] args) {
         JLoginForm j1 = new JLoginForm();
         j1.setSize(500,500);

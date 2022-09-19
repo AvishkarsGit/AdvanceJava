@@ -22,9 +22,7 @@ public class JTreeDemo extends JFrame {
         l22 = new DefaultMutableTreeNode("C++");
         l23 = new DefaultMutableTreeNode("Python");
 
-        l1.add(l11);
-        l1.add(l12);
-        l1.add(l13);
+        l1.add(l11);   l1.add(l13);
 
         l2.add(l21);
         l2.add(l22);
