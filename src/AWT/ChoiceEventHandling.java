@@ -36,7 +36,7 @@ public class ChoiceEventHandling extends Frame implements ItemListener {
         String str=c.getSelectedItem();
         l1.setText("You Have Selected :"+str);
 
-        l1.setFont(new Font("Times new Roman",Font.BOLD,15));
+        l1.setFont(new Font(    "Times new Roman",Font.BOLD,15));
 
     }
     public static void main(String[] args) {

@@ -9,7 +9,7 @@ public class JTabelDemo extends JFrame {
         Container c = getContentPane();
 
         String colname[]={"Roll NO","Name","Marks"};
-        String data[][]={{"1010","Dennis","89.90"},{"1011","Bjarne","90"},{"1012","James","87"}};
+        String data[][]={{"1010","Dennis","89.90"},{"1011","Bjarne","90"},{"1012","James","87"},{"1010","Dennis","89.90"},{"1011","Bjarne","90"},{"1012","James","87"}};
 
         JTable jt = new JTable(data,colname);
 
